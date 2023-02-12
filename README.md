@@ -16,7 +16,28 @@ Adapun requirement dari software ini adalah:
 5. Customer dapat menghitung total barang beserta potongan barang ketika ada syarat tertentu
 
 # Flowchart dari Program Cashier
+Berikut ini merupakan flowchart dari program self service cashier
+
+![Untitled Diagram](https://user-images.githubusercontent.com/55594639/218298691-b0efbc91-6670-412a-9014-ef939b53ecd2.jpg)
+Pertama, customer akan membuat ID Transaksi. Kemudian customer melakukan input data barang yang akan dibeli. Setelah diinput, customer melakukan pengecekan. Apabila ada dat yang perlu diperbaiki, maka customer akan menggunkanan fitur update untuk memperbaiki. Setelah semua sudah benar, maka akan lanjut ke pembayaran
 
 # Function dan atrribut yang dibuat beserta fungsinya
+Fungsi yang dibuat antara lain:
+1. Fungsi add_item, digunakan untuk menambahkan barang yang akan dibeli. Terdiri atas 4 variabel yaitu 
+    a. nama_item, berupa string yang merupakan nama barang yang akan dibeli
+    b. jumlah_item, berupa integer yang merupakan jumlah barang yang akan dibeli
+    c. harga_item, berupa integer yang merupakan harga satuan dari barang tersebut
+    d. total_harga, berupa integer dan merupakan hasil perkalian antara jumlah barang dengan harga
+2. check_order, digunakan untuk mengecek data yang telah diinput dan kemudian dimasukkan ke dalam pandas dataframe agar lebih rapih
+3. Update_barang, update_jumlah, update+harga, merupakan fungsi untuk mengupdate data apabila ada kesalahan dalam proses input data
+4. Delete_item, digunakan untuk menghapus barang yang telah ada di list belanjaan tetapi tidak jadi dibeli
+5. reset_transaction, untuk menghapus seluruh list barang yang telah terinput
+6. Pembayaran, untuk menghitung harga akhir setelah dikurangi diskon
 
 # Test Case
+
+Test case berhasil dijalankan di Google Colab. Namun, gagal dijalankan di terminal.
+
+# Kesimpulan
+
+Program self service cashier ini sudah berjalan baik ketika dijalankan di Google Colab. Namun sayangnya, belum berhasil dijalankan di terminal windows
