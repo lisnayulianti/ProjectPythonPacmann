@@ -22,9 +22,18 @@ class Transaction:
 
     Keempat variabel ini akan disimpan dalam list
     """
-    nama_item=str(input("Masukkan barang yang ingin dibeli: "))
-    jumlah_item=int(input("Masukkan jumlah barang yang dibeli "))
-    harga_item=int(input("Masukkan harga per item "))
+    try: #menggunakan try-except untuk menghindari TypeError saat input data
+      nama_item=str(input("Masukkan barang yang ingin dibeli: "))
+    except TypeError:
+      print("Harus berupa kata atau string")
+    try:
+      jumlah_item=int(input("Masukkan jumlah barang yang dibeli "))
+    except TypeError:
+      print("Harus berupa angka")
+    try:
+      harga_item=int(input("Masukkan harga per item "))
+    except TypeError:
+      print("Harus berupa angka")
     total_harga=jumlah_item*harga_item
     self.daftar_transaksi.append([nama_item, jumlah_item, harga_item, total_harga])
     print("Tambah belanjaan berhasil")
